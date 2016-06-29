@@ -97,16 +97,6 @@
                                                     <constraint firstAttribute="height" constant="150" id="Uwc-6w-ANg"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awr-Ro-A1e">
-                                                <rect key="frame" x="24" y="25" width="39" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="39" id="m9q-w2-OAy"/>
-                                                    <constraint firstAttribute="height" constant="30" id="rPw-zX-sBv"/>
-                                                </constraints>
-                                                <connections>
-                                                    <action selector="cellPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AbC-Dz-Q4A"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7zS-0B-mxB">
                                                 <rect key="frame" x="71" y="28" width="59" height="30"/>
                                                 <constraints>
@@ -165,6 +155,16 @@
                                                 <rect key="frame" x="138" y="143" width="38" height="30"/>
                                                 <connections>
                                                     <action selector="cellPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kKk-Ss-rwl"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awr-Ro-A1e">
+                                                <rect key="frame" x="24" y="25" width="39" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="39" id="m9q-w2-OAy"/>
+                                                    <constraint firstAttribute="height" constant="30" id="rPw-zX-sBv"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="cellPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AbC-Dz-Q4A"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -261,6 +261,7 @@
                     </view>
                     <connections>
                         <outlet property="boardView" destination="Rtf-G9-xSm" id="RBc-EX-aT4"/>
+                        <outlet property="button1" destination="awr-Ro-A1e" id="Ucm-Ra-DmE"/>
                         <outlet property="logoutButton" destination="ajH-wM-Mco" id="hGl-Sc-IOE"/>
                         <outlet property="newGameButton" destination="OeT-u1-D8y" id="BmS-OB-jNX"/>
                     </connections>

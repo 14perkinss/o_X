@@ -13,6 +13,7 @@
 		02F782CD1D22966600E3BC29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02F782CC1D22966600E3BC29 /* Assets.xcassets */; };
 		02F782D01D22966600E3BC29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02F782CE1D22966600E3BC29 /* LaunchScreen.storyboard */; };
 		AF11E0651D23DB3A00432F8A /* OXGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11E0641D23DB3A00432F8A /* OXGame.swift */; };
+		AF11E06E1D24292B00432F8A /* OXGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11E06D1D24292B00432F8A /* OXGameController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		02F782CF1D22966600E3BC29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02F782D11D22966600E3BC29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF11E0641D23DB3A00432F8A /* OXGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OXGame.swift; sourceTree = "<group>"; };
+		AF11E06D1D24292B00432F8A /* OXGameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OXGameController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				02F782C51D22966600E3BC29 /* AppDelegate.swift */,
 				02F782C71D22966600E3BC29 /* BoardViewController.swift */,
+				AF11E06D1D24292B00432F8A /* OXGameController.swift */,
 				02F782C91D22966600E3BC29 /* Main.storyboard */,
 				02F782CC1D22966600E3BC29 /* Assets.xcassets */,
 				02F782CE1D22966600E3BC29 /* LaunchScreen.storyboard */,
@@ -151,6 +154,7 @@
 			files = (
 				02F782C81D22966600E3BC29 /* BoardViewController.swift in Sources */,
 				AF11E0651D23DB3A00432F8A /* OXGame.swift in Sources */,
+				AF11E06E1D24292B00432F8A /* OXGameController.swift in Sources */,
 				02F782C61D22966600E3BC29 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

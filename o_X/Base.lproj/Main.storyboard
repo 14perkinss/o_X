@@ -103,6 +103,9 @@
                                                     <constraint firstAttribute="width" constant="39" id="m9q-w2-OAy"/>
                                                     <constraint firstAttribute="height" constant="30" id="rPw-zX-sBv"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="cellPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AbC-Dz-Q4A"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7zS-0B-mxB">
                                                 <rect key="frame" x="71" y="28" width="59" height="30"/>
@@ -110,6 +113,9 @@
                                                     <constraint firstAttribute="height" constant="30" id="0lj-Ki-jTJ"/>
                                                     <constraint firstAttribute="width" constant="59" id="hFl-6A-2N8"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="cellPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kRE-bm-LnH"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzn-l9-TOZ">
                                                 <rect key="frame" x="137" y="23" width="35" height="35"/>
@@ -117,6 +123,9 @@
                                                     <constraint firstAttribute="height" constant="35" id="0og-X8-HFC"/>
                                                     <constraint firstAttribute="width" constant="35" id="Pxq-r7-NV0"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="cellPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2ik-oq-3I4"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkW-Wz-dc1">
                                                 <rect key="frame" x="33" y="65" width="30" height="70"/>
@@ -124,24 +133,39 @@
                                                     <constraint firstAttribute="width" constant="30" id="WgB-PC-ZKs"/>
                                                     <constraint firstAttribute="height" constant="70" id="f2R-sf-d5h"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="cellPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XI5-ak-hOH"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DkQ-F1-8ol">
                                                 <rect key="frame" x="70" y="65" width="60" height="70"/>
+                                                <connections>
+                                                    <action selector="cellPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iuo-fM-NJA"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MNZ-ra-BdR">
                                                 <rect key="frame" x="138" y="66" width="34" height="69"/>
+                                                <connections>
+                                                    <action selector="cellPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jhd-GX-FAS"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BnI-FH-5EE">
                                                 <rect key="frame" x="25" y="143" width="38" height="32"/>
                                                 <connections>
-                                                    <action selector="movePlayed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JXp-4A-q74"/>
+                                                    <action selector="cellPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3YQ-Tm-IIK"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xhk-ZH-HVA">
                                                 <rect key="frame" x="71" y="143" width="59" height="30"/>
+                                                <connections>
+                                                    <action selector="cellPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WMl-sb-fDh"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EjU-qS-YZL">
                                                 <rect key="frame" x="138" y="143" width="38" height="30"/>
+                                                <connections>
+                                                    <action selector="cellPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kKk-Ss-rwl"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -239,8 +263,6 @@
                         <outlet property="boardView" destination="Rtf-G9-xSm" id="RBc-EX-aT4"/>
                         <outlet property="logoutButton" destination="ajH-wM-Mco" id="hGl-Sc-IOE"/>
                         <outlet property="newGameButton" destination="OeT-u1-D8y" id="BmS-OB-jNX"/>
-                        <outletCollection property="gameButtons" destination="BnI-FH-5EE" collectionClass="NSMutableArray" id="h2h-Un-bqh"/>
-                        <outletCollection property="cellButtons" destination="DkQ-F1-8ol" id="gcd-NB-Iq6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

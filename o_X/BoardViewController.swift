@@ -29,5 +29,9 @@ class BoardViewController: UIViewController {
         print("Logout button pressed")
     }
 
+    @IBAction func cellPressed(sender: AnyObject) {
+        print("Button Pressed:", sender.tag)
+    }
+    
+    var gameObject = OXGame()
 }
-

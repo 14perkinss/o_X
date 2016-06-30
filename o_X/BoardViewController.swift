@@ -7,19 +7,18 @@ import UIKit
 
 class BoardViewController: UIViewController {
     @IBOutlet weak var boardView: UIView!
-    @IBOutlet weak var newGameButton: UIBarButtonItem!
+    @IBOutlet weak var newGameButton: UIButton!
     // Create additional IBOutlets here.
 
     @IBOutlet weak var logoutButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view, typically from a nib.
+        newGameButton.hidden = true
     }
     
 
-    @IBAction func newGamePressed(sender: UIBarButtonItem) {
+    @IBAction func newGamePressed(sender: UIButton) {
         print("New Game Button Pressed")
         restartGame()
     }
@@ -39,8 +38,22 @@ class BoardViewController: UIViewController {
         
         if (gameState == OXGameState.Won) {
             print("Congratulations, ", currGame.whoseTurn().rawValue)
+            newGameButton.hidden = false
+            let winner : String = "\(currGame.whoseTurn().rawValue) Won!"
+            let alert = UIAlertController(title: "Game Over", message: winner, preferredStyle: UIAlertControllerStyle.Alert)
+            let alertAction = UIAlertAction(title: "Dismiss", style: .Default, handler: {(action) in
+            })
+            alert.addAction(alertAction)
+            self.presentViewController(alert, animated: true, completion: nil)
+            
         } else if (gameState == OXGameState.Tie) {
             print("Game ended in a tie")
+            newGameButton.hidden = false
+            let alert = UIAlertController(title: "Game Over", message: "Game Ended in a Tie!", preferredStyle: UIAlertControllerStyle.Alert)
+            let alertAction = UIAlertAction(title: "Dismiss", style: .Default, handler: {(action) in
+            })
+            alert.addAction(alertAction)
+            self.presentViewController(alert, animated: true, completion: nil)
         }
         
         sender.enabled = false

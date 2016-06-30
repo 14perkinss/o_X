@@ -34,9 +34,9 @@ class OXGame {
     
     func whoseTurn() -> CellType {
         if (self.turns % 2 == 0) {
-            return CellType.X
-        } else {
             return CellType.O
+        } else {
+            return CellType.X
         }
     }
     

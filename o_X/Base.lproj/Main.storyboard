@@ -261,7 +261,6 @@
                     </view>
                     <connections>
                         <outlet property="boardView" destination="Rtf-G9-xSm" id="RBc-EX-aT4"/>
-                        <outlet property="button1" destination="awr-Ro-A1e" id="Ucm-Ra-DmE"/>
                         <outlet property="logoutButton" destination="ajH-wM-Mco" id="hGl-Sc-IOE"/>
                         <outlet property="newGameButton" destination="OeT-u1-D8y" id="BmS-OB-jNX"/>
                     </connections>

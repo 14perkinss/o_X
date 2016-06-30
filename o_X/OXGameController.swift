@@ -18,6 +18,7 @@ class OXGameController {
     }
     
     func restartGame() {
+        
         currentGame.reset()
     }
     

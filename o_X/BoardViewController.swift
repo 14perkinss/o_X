@@ -21,7 +21,7 @@ class BoardViewController: UIViewController {
 
     @IBAction func newGamePressed(sender: UIBarButtonItem) {
         print("New Game Button Pressed")
-        OXGameController.sharedInstance.restartGame()
+        restartGame()
     }
     
     // Create additional IBActions here.
@@ -29,20 +29,32 @@ class BoardViewController: UIViewController {
         print("Logout button pressed")
     }
 
-    @IBAction func cellPressed(sender: AnyObject) {
+    @IBAction func cellPressed(sender: UIButton) {
         OXGameController.sharedInstance.playMove(sender.tag)
-        var currGame = OXGameController.sharedInstance.getCurrentGame()
-        //sender.title = currGame.whoseTurn()
+        let currGame = OXGameController.sharedInstance.getCurrentGame()
+        sender.setTitle(currGame.whoseTurn().rawValue, forState: .Normal)
         print("Button Pressed:", sender.tag)
-        var gameState = currGame.state()
+        
+        let gameState = currGame.state()
+        
         if (gameState == OXGameState.Won) {
-            print("Congratulations!")
-            OXGameController.sharedInstance.restartGame()
+            print("Congratulations, ", currGame.whoseTurn().rawValue)
         } else if (gameState == OXGameState.Tie) {
             print("Game ended in a tie")
-            OXGameController.sharedInstance.restartGame()
         }
         
+        sender.enabled = false
+        
+    }
+    
+    func restartGame() {
+        OXGameController.sharedInstance.restartGame()
+        for subview in boardView.subviews {
+            if let button = subview as? UIButton {
+                button.setTitle("", forState: .Normal)
+                button.enabled = true
+            }
+        }
     }
     
     var gameObject = OXGame()

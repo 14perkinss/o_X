@@ -42,40 +42,40 @@ class OXGame {
     
     func playMove(cell: Int) -> CellType {
         self.turns += 1
-        self.board[cell] = self.whoseTurn();
-        return self.board[cell];
+        self.board[cell - 1] = self.whoseTurn();
+        return self.board[cell - 1];
     }
 
     func gameWon() -> Bool {
-        if (board[1] != CellType.EMPTY) {
-            if (board[1] == board[2] && board[1] == board[3]) {
+        if (board[0] != CellType.EMPTY) {
+            if (board[0] == board[1] && board[0] == board[2]) {
                 return true
             }
-            if (board[1] == board[4] && board[1] == board[7]) {
+            if (board[0] == board[3] && board[0] == board[6]) {
                 return true
             }
-            if (board[1] == board[5] && board[1] == board[9]) {
-                return true
-            }
-        }
-        
-        if (board[9] != CellType.EMPTY) {
-            if (board[9] == board[8] && board[9] == board[7]) {
-                return true
-            }
-            if (board[9] == board[6] && board[9] == board[3]) {
+            if (board[0] == board[4] && board[0] == board[8]) {
                 return true
             }
         }
         
-        if (board[5] != CellType.EMPTY) {
-            if (board[5] == board[2] && board[5] == board[8]) {
+        if (board[8] != CellType.EMPTY) {
+            if (board[8] == board[7] && board[8] == board[6]) {
                 return true
             }
-            if (board[5] == board[4] && board[5] == board[6]) {
+            if (board[8] == board[5] && board[8] == board[2]) {
                 return true
             }
-            if (board[5] == board[3] && board[5] == board[7]) {
+        }
+        
+        if (board[4] != CellType.EMPTY) {
+            if (board[4] == board[1] && board[4] == board[7]) {
+                return true
+            }
+            if (board[4] == board[3] && board[4] == board[5]) {
+                return true
+            }
+            if (board[4] == board[2] && board[4] == board[6]) {
                 return true
             }
         }

@@ -38,6 +38,7 @@
                                                     <color key="titleColor" red="0.76078431369999999" green="0.1843137255" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="logoutButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wCL-DQ-6S7"/>
                                                     <action selector="logoutPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PmF-Tm-FCx"/>
                                                 </connections>
                                             </button>
@@ -294,7 +295,6 @@
                     </view>
                     <connections>
                         <outlet property="boardView" destination="Rtf-G9-xSm" id="RBc-EX-aT4"/>
-                        <outlet property="logoutButton" destination="ajH-wM-Mco" id="hGl-Sc-IOE"/>
                         <outlet property="newGameButton" destination="N1O-JH-tIp" id="uJV-R5-7Kt"/>
                     </connections>
                 </viewController>

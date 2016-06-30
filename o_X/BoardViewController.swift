@@ -17,7 +17,7 @@ class BoardViewController: UIViewController {
         newGameButton.hidden = true
     }
     
-
+    
     @IBAction func newGamePressed(sender: UIButton) {
         print("New Game Button Pressed")
         restartGame()

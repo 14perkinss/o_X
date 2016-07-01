@@ -8,9 +8,8 @@ import UIKit
 class BoardViewController: UIViewController {
     @IBOutlet weak var boardView: UIView!
     @IBOutlet weak var newGameButton: UIButton!
-    // Create additional IBOutlets here.
-
     @IBOutlet weak var logoutButton: UIButton!
+    // Create additional IBOutlets here.
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,10 +22,19 @@ class BoardViewController: UIViewController {
         restartGame()
     }
     
-    // Create additional IBActions here.
-    @IBAction func logoutPressed(sender: AnyObject) {
-        print("Logout button pressed")
+    @IBAction func logoutButtonPressed(sender: UIButton) {
+        //Get the other storyboard object
+        let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+        //Get the root view controller of the other storyboard object
+        let viewController = storyboard.instantiateInitialViewController()
+        //Get the application object
+        let application = UIApplication.sharedApplication()
+        //Get the window object from the application object
+        let window = application.keyWindow
+        //Set the rootViewController of the window to the rootViewController of the other storyboard
+        window?.rootViewController = viewController
     }
+
 
     @IBAction func cellPressed(sender: UIButton) {
         OXGameController.sharedInstance.playMove(sender.tag)

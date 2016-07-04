@@ -12,7 +12,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        let onCompletion = {(currentUser: User?, errorMessage: String?) -> Void in
+                //Get the other storyboard object
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                //Get the root view controller of the other storyboard object
+                let viewController = storyboard.instantiateInitialViewController()
+                //Set the rootViewController of the window to the rootViewController of the other storyboard
+                self.window?.rootViewController = viewController
+        }
+
         // Override point for customization after application launch.
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if let userEmail = defaults.stringForKey("currentUserEmail") {
+            if let userPassword = defaults.stringForKey("currentUserPassword") {
+                UserController.sharedInstance.register(userEmail, password: userPassword, onCompletion: onCompletion)
+            } else {
+                print("No current password")
+            }
+        } else {
+            print("No current email")
+        }
+        
         return true
     }
 

@@ -19,6 +19,7 @@
 		AF0848C01D2558FD00AD92CC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0848BF1D2558FD00AD92CC /* LoginViewController.swift */; };
 		AF11E0651D23DB3A00432F8A /* OXGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11E0641D23DB3A00432F8A /* OXGame.swift */; };
 		AF11E06E1D24292B00432F8A /* OXGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11E06D1D24292B00432F8A /* OXGameController.swift */; };
+		AFE5DC911D2A72C300030314 /* NetworkGamesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5DC901D2A72C300030314 /* NetworkGamesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		AF0848BF1D2558FD00AD92CC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AF11E0641D23DB3A00432F8A /* OXGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OXGame.swift; sourceTree = "<group>"; };
 		AF11E06D1D24292B00432F8A /* OXGameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OXGameController.swift; sourceTree = "<group>"; };
+		AFE5DC901D2A72C300030314 /* NetworkGamesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkGamesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				AF11E06D1D24292B00432F8A /* OXGameController.swift */,
 				AF0848BD1D2558E800AD92CC /* RegisterViewController.swift */,
 				AF0848BF1D2558FD00AD92CC /* LoginViewController.swift */,
+				AFE5DC901D2A72C300030314 /* NetworkGamesTableViewController.swift */,
 				AF0848B91D25512500AD92CC /* UserController.swift */,
 				AF0848BB1D25565D00AD92CC /* Onboarding.storyboard */,
 				02F782C91D22966600E3BC29 /* Main.storyboard */,
@@ -173,6 +176,7 @@
 				AF0848BE1D2558E800AD92CC /* RegisterViewController.swift in Sources */,
 				AF11E0651D23DB3A00432F8A /* OXGame.swift in Sources */,
 				AF0848C01D2558FD00AD92CC /* LoginViewController.swift in Sources */,
+				AFE5DC911D2A72C300030314 /* NetworkGamesTableViewController.swift in Sources */,
 				AF11E06E1D24292B00432F8A /* OXGameController.swift in Sources */,
 				AF0848B81D2550F700AD92CC /* User.swift in Sources */,
 				02F782C61D22966600E3BC29 /* AppDelegate.swift in Sources */,

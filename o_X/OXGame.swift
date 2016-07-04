@@ -27,7 +27,59 @@ enum OXGameState : String {
 class OXGame {
     var turns : Int = 0
     var board : [CellType] = [CellType.EMPTY,CellType.EMPTY,CellType.EMPTY,CellType.EMPTY,CellType.EMPTY,CellType.EMPTY,CellType.EMPTY,CellType.EMPTY,CellType.EMPTY]
+    var ID: Int = 0000000
+    var host: String = "DummyHost"
     var startType : CellType = CellType.X
+    
+    init()  {
+        //we are simulating setting our board from the internet
+        let simulatedBoardStringFromNetwork = "oxoxxxxx_" //update this string to different values to test your model serialisation
+        self.board = deserialiseBoard(simulatedBoardStringFromNetwork) //your OXGame board model should get set here
+        if(simulatedBoardStringFromNetwork == serialiseBoard())    {
+            print("start\n------------------------------------")
+            print("congratulations, you successfully deserialised your board and serialized it again correctly. You can send your data model over the internet with this code. 1 step closer to network OX ;)")
+            
+            print("done\n------------------------------------")
+        }   else    {
+            print("start\n------------------------------------")
+            print ("your board deserialisation and serialization was not correct :( carry on coding on those functions")
+            
+            print("done\n------------------------------------")
+        }
+        
+    }
+    
+    private func deserialiseBoard(boardString: String) -> [CellType] {
+        var newBoard = [CellType.EMPTY,CellType.EMPTY,CellType.EMPTY,CellType.EMPTY,CellType.EMPTY,CellType.EMPTY,CellType.EMPTY,CellType.EMPTY,CellType.EMPTY]
+        var count = 0
+        for i in boardString.characters {
+            if (i == "o") {
+                newBoard[count] = CellType.O
+            } else if (i == "x") {
+                newBoard[count] = CellType.X
+            }
+            count += 1
+        }
+        print (newBoard)
+        return newBoard;
+    }
+    
+    private func serialiseBoard() -> String {
+        var boardString = ""
+        for i in self.board {
+            if (i == CellType.X) {
+                boardString.append("x" as Character)
+            } else if (i == CellType.O) {
+                boardString.append("o" as Character)
+            } else {
+                boardString.append("_" as Character)
+            }
+        }
+        print (boardString)
+        return boardString
+    }
+    
+    
     func turnCount() -> Int {
         return self.turns
     }

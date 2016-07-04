@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="D9b-ah-4yg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="D9b-ah-4yg">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -49,7 +49,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aE0-ld-VoS">
-                                <rect key="frame" x="200" y="372" width="200" height="36"/>
+                                <rect key="frame" x="200" y="282" width="200" height="36"/>
                                 <color key="backgroundColor" red="0.76078431369999999" green="0.1843137255" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="Wnc-AN-aO2"/>
@@ -73,7 +73,7 @@
                         <constraints>
                             <constraint firstItem="HoJ-e2-0q5" firstAttribute="centerX" secondItem="VhJ-j0-GaE" secondAttribute="centerX" id="2df-wl-cDs"/>
                             <constraint firstItem="Zcf-tN-udz" firstAttribute="centerY" secondItem="VhJ-j0-GaE" secondAttribute="centerY" multiplier="0.7" id="GSr-28-urY"/>
-                            <constraint firstItem="aE0-ld-VoS" firstAttribute="centerY" secondItem="VhJ-j0-GaE" secondAttribute="centerY" multiplier="1.3" id="Xhy-f6-qV6"/>
+                            <constraint firstItem="aE0-ld-VoS" firstAttribute="centerY" secondItem="VhJ-j0-GaE" secondAttribute="centerY" id="Xhy-f6-qV6"/>
                             <constraint firstItem="Zcf-tN-udz" firstAttribute="top" secondItem="HoJ-e2-0q5" secondAttribute="bottom" constant="55" id="iWb-jq-QH8"/>
                             <constraint firstItem="aE0-ld-VoS" firstAttribute="centerX" secondItem="VhJ-j0-GaE" secondAttribute="centerX" id="sb3-ME-Vsf"/>
                             <constraint firstItem="Zcf-tN-udz" firstAttribute="centerX" secondItem="VhJ-j0-GaE" secondAttribute="centerX" id="z2a-Kr-aM4"/>
@@ -129,7 +129,7 @@
                                     <constraint firstAttribute="width" constant="150" id="K5x-zw-CUO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8W6-G5-tOi">
                                 <rect key="frame" x="229" y="384" width="143" height="33"/>
@@ -210,7 +210,7 @@
                                     <constraint firstAttribute="width" constant="150" id="Ky3-w2-KPX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register New User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zke-0H-GIS">
                                 <rect key="frame" x="229" y="140" width="143" height="21"/>

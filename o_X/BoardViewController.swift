@@ -9,11 +9,13 @@ class BoardViewController: UIViewController {
     @IBOutlet weak var boardView: UIView!
     @IBOutlet weak var newGameButton: UIButton!
     @IBOutlet weak var logoutButton: UIButton!
+    @IBOutlet weak var networkPlayButton: UIButton!
     // Create additional IBOutlets here.
     
     override func viewDidLoad() {
         super.viewDidLoad()
         newGameButton.hidden = true
+        updateUI()
     }
     
     
@@ -23,19 +25,17 @@ class BoardViewController: UIViewController {
     }
     
     @IBAction func logoutButtonPressed(sender: UIButton) {
-        //Get the other storyboard object
-        let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
-        //Get the root view controller of the other storyboard object
-        let viewController = storyboard.instantiateInitialViewController()
-        //Get the application object
-        let application = UIApplication.sharedApplication()
-        //Get the window object from the application object
-        let window = application.keyWindow
-        //Set the rootViewController of the window to the rootViewController of the other storyboard
-        window?.rootViewController = viewController
+        let onCompletion = {(errorMessage: String?) -> Void in
+            //If there was an error, show an alert
+            let alert = UIAlertController(title: "Log Out Successful", message: errorMessage, preferredStyle: UIAlertControllerStyle.Alert)
+            let action = UIAlertAction(title: "Dismiss", style: .Default, handler: {(action) in
+            })
+            alert.addAction(action)
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+        UserController.sharedInstance.logout(onCompletion)
     }
-
-
+    
     @IBAction func cellPressed(sender: UIButton) {
         OXGameController.sharedInstance.playMove(sender.tag)
         let currGame = OXGameController.sharedInstance.getCurrentGame()
@@ -79,4 +79,26 @@ class BoardViewController: UIViewController {
     }
     
     var gameObject = OXGame()
+    
+    
+    /* BoardViewController's updateUI() function: This function must set the values of O and X on the board, based on the games board array values */
+    func updateUI() {
+        let currGame = OXGameController.sharedInstance.getCurrentGame()
+        var count = 0
+        for subview in boardView.subviews {
+            if let button = subview as? UIButton {
+                if (currGame.board[count] == CellType.EMPTY) {
+                    button.setTitle("", forState: .Normal)
+                    button.enabled = true
+                } else if (currGame.board[count] == CellType.O) {
+                    button.setTitle("O", forState: .Normal)
+                    button.enabled = false
+                } else {
+                    button.setTitle("X", forState: .Normal)
+                    button.enabled = false
+                }
+                count += 1
+            }
+        }
+    }
 }

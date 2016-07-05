@@ -10,21 +10,29 @@ import UIKit
 
 class NetworkGamesTableViewController: UITableViewController {
     @IBOutlet weak var backButton: UIBarButtonItem!
-    var games = []
+    private var gameArray : [OXGame] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let onCompletion = {(gameList: [OXGame]?, errorMessage: String?) -> Void in
+            if (errorMessage == "") {
+                for game in gameList! {
+                    self.gameArray.append(game)
+                }
+            } else {
+                print(errorMessage)
+            }
+        }
+        
+        OXGameController.sharedInstance.getGames(onCompletion: onCompletion)
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        let onCompletion = {(gameList: [OXGame]?, errorMessage: String?) -> Void in
-            self.games = gameList!
-        }
-        
-        OXGameController.sharedInstance.getGames(onCompletion: onCompletion)
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,7 +49,7 @@ class NetworkGamesTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return games.count
+        return gameArray.count
     }
 
     
@@ -49,12 +57,16 @@ class NetworkGamesTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
 
         //Configure cell
-        cell.textLabel?.text = String(games[indexPath.row].host!)
+        cell.textLabel?.text = String(gameArray[indexPath.row].host)
         
         return cell
     }
     
 
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

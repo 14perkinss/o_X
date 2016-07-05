@@ -27,7 +27,7 @@ class OXGameController {
     }
     
     func getGames(onCompletion onCompletion: ([OXGame]?, String?) -> Void) {
-         onCompletion([OXGame(), OXGame()], nil)
+        onCompletion([OXGame(), OXGame()], "")
     }
 
 }

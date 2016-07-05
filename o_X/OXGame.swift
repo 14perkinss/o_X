@@ -18,6 +18,8 @@ enum CellType : String {
 
 enum OXGameState : String {
     
+    case Open
+    case Abandoned
     case InProgress
     case Tie
     case Won
@@ -33,7 +35,7 @@ class OXGame {
     
     init()  {
         //we are simulating setting our board from the internet
-        let simulatedBoardStringFromNetwork = "oxoxxxxx_" //update this string to different values to test your model serialisation
+        let simulatedBoardStringFromNetwork = "_________" //update this string to different values to test your model serialisation
         self.board = deserialiseBoard(simulatedBoardStringFromNetwork) //your OXGame board model should get set here
         if(simulatedBoardStringFromNetwork == serialiseBoard())    {
             print("start\n------------------------------------")

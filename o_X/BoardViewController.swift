@@ -12,6 +12,8 @@ class BoardViewController: UIViewController {
     @IBOutlet weak var networkPlayButton: UIButton!
     // Create additional IBOutlets here.
     
+    var networkMode: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         newGameButton.hidden = true
@@ -77,8 +79,6 @@ class BoardViewController: UIViewController {
             }
         }
     }
-    
-    var gameObject = OXGame()
     
     
     /* BoardViewController's updateUI() function: This function must set the values of O and X on the board, based on the games board array values */

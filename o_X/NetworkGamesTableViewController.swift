@@ -63,9 +63,9 @@ class NetworkGamesTableViewController: UITableViewController {
     }
     
 
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    /*func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-    }
+    }*/
     
     /*
     // Override to support conditional editing of the table view.

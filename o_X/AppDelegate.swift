@@ -4,7 +4,7 @@
 //
 
 import UIKit
-
+import Alamofire
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -12,6 +12,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
         let onCompletion = {(currentUser: User?, errorMessage: String?) -> Void in
                 //Get the other storyboard object
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -25,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let defaults = NSUserDefaults.standardUserDefaults()
         if let userEmail = defaults.stringForKey("currentUserEmail") {
             if let userPassword = defaults.stringForKey("currentUserPassword") {
-                UserController.sharedInstance.register(userEmail, password: userPassword, onCompletion: onCompletion)
+                UserController.sharedInstance.login(userEmail, password: userPassword, onCompletion: onCompletion)
             } else {
                 print("No current password")
             }
